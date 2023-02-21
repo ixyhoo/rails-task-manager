@@ -1,0 +1,12 @@
+<h1>Tasks#index</h1>
+<p>Find me in app/views/tasks/index.html.erb</p>
+
+<% if @tasks.size > 0 %>
+  <ul>
+  <% @tasks.each do |task| %>
+    <li><%= link_to task.title, task_path(task)%></li>
+  <% end %>
+</ul>
+<% else %>
+<p>créer une tache</p>
+<% end %>
